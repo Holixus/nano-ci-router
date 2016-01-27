@@ -10,6 +10,34 @@
 
 Command interface router module.
 
+## API
+
+```js
+var CiRouter = require('nano-ci-router');
+
+var ci = new CiRouter();
+
+ci.install({
+	'get': {
+		'version': function (args, done) {
+			done('5.0');
+		},
+		'file': function (args, done) {
+			fs.readFile(Path.join(STORAGE, args.path), 'utf8', done);
+		}
+	}
+});
+
+ci.exec('get version', function (v) {
+	console.log(v);
+});
+
+ci.batch([ 'get version', 'get file', { path: 'README.md' } ], function (ver, text) {
+	console.log(ver); // will print 5.0
+	console.log(text); // will print README.md file content
+});
+```
+
 [bithound-image]: https://www.bithound.io/github/Holixus/nano-ci-router/badges/score.svg
 [bithound-url]: https://www.bithound.io/github/Holixus/nano-ci-router
 
