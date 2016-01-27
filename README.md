@@ -31,8 +31,8 @@ Command interface router module.
 [david-image]: https://david-dm.org/Holixus/nano-ci-router.svg
 [david-url]: https://david-dm.org/Holixus/nano-ci-router
 
-[license-image]: http://img.shields.io/npm/l/nano-ci-router.svg
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: LICENSE
 
-[downloads-image]: http://img.shields.io/npm/dm/nano-ci-router.svg
+[downloads-image]: http://img.shields.io/npm/dt/nano-ci-router.svg
 [downloads-url]: https://npmjs.org/package/nano-ci-router
