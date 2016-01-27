@@ -23,7 +23,9 @@ ci.install({
 			done('5.0');
 		},
 		'file': function (args, done) {
-			fs.readFile(Path.join(STORAGE, args.path), 'utf8', done);
+			fs.readFile(Path.join(STORAGE, args.path), 'utf8', function (err, text) {
+				return err || text;
+			});
 		}
 	}
 });
